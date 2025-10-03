@@ -10,12 +10,12 @@ trigger triggerOnAccount on Account (before insert , before update , after inser
         }
     }
     
-   /* if( trigger.isbefore ){
+   if( trigger.isbefore ){
         if (trigger.isdelete){							    
             triggerOnAccountHandler.PreventAccountDeletation( trigger.old);					
         }
     }
-   */
+   
     if(trigger.isafter && trigger.isinsert){
         triggerOnAccountHandler.CreateRealtedOpporunity(trigger.new);
     }
@@ -35,10 +35,11 @@ trigger triggerOnAccount on Account (before insert , before update , after inser
         triggerOnAccountHandler.DuplicateAccount( trigger.new);
     }
     
-   /* if( trigger.isbefore && trigger.isdelete){
+   if( trigger.isbefore && trigger.isdelete){
         triggerOnAccountHandler.CheckUser( trigger.new);
     }
-   */
+   
     
    
+
 }
