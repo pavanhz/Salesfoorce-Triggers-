@@ -56,7 +56,7 @@ public class triggerOnOpportunityaHandler {
         
     }
     	
-    // Coount The Numbers Of Opportunity realted to Account 
+    // Count The Numbers Of Opportunity realted to Account 
      public static void CountOpporunityOnAccount( List<Opportunity> Opplist){
          Set<Id> AccIds = new Set<Id>();
          
